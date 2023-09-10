@@ -1,0 +1,458 @@
+@font-face {
+    font-family: montserat;
+    src: url(/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserat-bold;
+    src: url(/Montserrat-ExtraBold.ttf);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    height: 90vh;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.about{
+    width: 50%;
+    overflow-y: scroll;
+    height: 106.2vh;
+    background-color: #11005e;
+}
+
+.about::-webkit-scrollbar{
+    display: none;
+}
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 47%;
+    transition: 0.6s;
+    z-index: 1000;
+    background-color: #11005e;
+    height: 6rem;
+}
+
+.navbar .navitems a .logo{
+    width: 3.5rem;
+    height: 3.5rem;
+    position: relative;
+    padding-left: 20px;
+    padding-top: 1.3rem;
+    transition: 0.5s;
+}
+
+.navbar .navitems .navlinks{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    font-size: 15px;
+    transition: 0.5s;
+    width: 60%;
+    background-color: #11005e;
+}
+
+.navbar .navitems{
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    width: 100%;
+}
+
+.navbar .navitems .navlinks li a{
+    margin-right: 45px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: verdana, sans-serif;
+    text-decoration: none;
+    font-family: montserat;
+}
+
+.navbar .navitems .navlinks li a:hover{
+    color: #5f45d1;
+    transition: 0.2s ease-in;
+}
+
+.navbar .navitems .navlinks .closemenu{
+    width: 2rem;
+    height: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+.navbar .navitems .openmenu{
+    width: 3rem;
+    height: 3rem;
+    margin: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+.sticky .navbar{
+    height: 5.5rem;
+    transition: 0.6s;
+}
+
+.sticky .navbar .navitems a .logo{
+    width: 2rem;
+    height: 2rem;
+    transition: 0.5s;
+}
+
+.sticky .navbar .navitems .openmenu{
+    width: 2rem;
+    height: 2rem;
+    margin: 2rem;
+}
+
+.sticky .navbar .nav-items .navlinks li a{
+    color: black;
+}
+.sticky .navbar .nav-items{
+    padding-top: 15px;
+}
+
+
+.container{
+    padding: 20px;
+    width: 50%;
+    height: 100vh;
+    background-image: url(/signin.jpg);
+    background-position: center;
+}
+
+#form{
+    width: 500px;
+    height: 84%;
+    border-radius: 6px;
+    font-size: 15px;
+    margin: 10vh auto 0 auto; 
+    background-color: rgb(231, 226, 226);
+    font-family: montserat;
+    padding: 5px;
+}
+
+.about h1{
+    font-family: montserat-bold;
+    color: white;
+    font-size: 4rem;
+    padding: 0 4rem;
+    margin-top: 10rem;
+}
+
+.about h1 span{
+    color: #6b57c5;
+}
+
+.about p{
+    margin: 4rem;
+    font-family: montserat;
+    color: white;
+    font-size: 12px;
+}
+
+#form h1{
+    text-align: center;
+    font-size: 50px;
+    font-family: montserat-bold;
+}
+
+#form p{
+    text-align: center;  
+    font-size: 12px; 
+}
+
+#form p a{
+    color: rgb(41, 41, 206);
+    cursor: pointer;
+}
+
+#form button{
+    padding: 15px;
+    margin-top: 10px;
+    width: 100%;
+    color: white;
+    background-color: #11005e;
+    border: none;
+    border-radius: 4px;
+    font-family: montserat;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+}
+
+#form button:hover{
+    background-color: #6b57c5;
+}
+
+.input-control{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.input-control input{
+    border: 2px solid white;
+    border-radius: 6px;
+    display: block;
+    font-size: 15px;
+    padding: 8px;
+    width: 100%;
+}
+
+.input-control input:focus{
+    outline: 0;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.input-control.success input{
+    border-color: #11005e;
+}
+
+.input-control.error input{
+    border-color: #ff3860;
+}
+
+.input-control.error{
+    color: #ff3860;
+    font-size: 9px;
+    height: 50px;
+}
+
+@media(max-width: 750px){
+    .about{
+        width: 100.9%;
+        overflow: hidden;
+        height: 255vh;
+    }
+
+    .about p{
+        margin-bottom: 1px;
+    }
+    
+    body{
+        display: flex;
+        flex-direction: column;
+        height: auto;
+        margin: 0;
+        padding: 0;
+        width: 107.1%;
+    }
+
+    header{
+        width: 100%;
+    }
+
+    #form{
+        height: 70%;
+    }
+
+    .container{
+        position: absolute;
+        top: 190%;
+        width: 100%;
+        height: 130vh;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        overflow: hidden;
+    }
+
+    .secondform .form2{
+        top: 0rem;
+        left: -18rem;
+    }
+    
+    .secondform .details{
+        width: 28rem;
+    }
+}
+
+
+/*------second form-------*/
+
+.secondform{
+    border-radius: 6px;
+    font-size: 10px;
+    background-color: rgb(231, 226, 226);
+    font-family: montserat;
+    position: absolute;
+    top: 3rem;
+    left: 52%;
+    display: none;
+    transition: 0.5s ease-in;
+}
+
+.secondform .form2{
+    position: absolute;
+    background-color: rgb(231, 226, 226);
+    transition: 0.5s ease-in;
+    margin-right: 2rem;
+    border-radius: 6px;
+    width: 40rem;
+}
+
+.secondform .form2 .signin{
+    font-size: 13px;
+    margin-left: 1.3rem;
+}
+
+.secondform .form2 .signin a{
+    color: rgb(41, 41, 206);
+    cursor: pointer;
+}
+
+.secondform .form2.second{
+    pointer-events: auto;
+    display: none;
+    transform: translateX(100%);
+    transition: 0.5s ease-in;
+}
+
+.secondform.secActive .form2.second{
+    pointer-events: auto;
+    display: block;
+    transform: translateX(0);
+    transition: 0.5s ease-in;
+}
+
+.secondform.secActive .form2.first{
+    pointer-events: none;
+    display: none;
+    transform: translateX(-100%);
+    transition: 0.5s ease-in;
+}
+
+.secondform h1{
+    font-size: 30px;
+    margin-left: 20px;
+    font-family: montserat-bold;
+}
+
+.secondform .details{
+    margin-top: 30px;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.secondform .details.ID{
+    margin-top: 30px;
+}
+
+.secondform .title{
+    display: block;
+    margin-bottom: 8px;
+    font-size: 16px;
+    font-weight: 800;
+    margin: 6px 0
+}
+
+.secondform .fields{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*so the items dont go past the div*/
+    flex-wrap: wrap;
+}
+
+.secondform .fields .input-field{
+    display: flex;
+    width: calc(100% / 3 - 15px);
+    flex-direction: column;
+    margin: 8px 0;
+}
+
+.input-field label{
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.input-field input{
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    padding: 0 15px;
+    height: 30px;
+    margin: 8px 0;
+}
+
+.input-field.error input{
+    border: 1px solid #ff3860;
+    font-size: 15px;
+    padding: 8px;
+}
+
+
+.input-field.success input{
+    border: 1px solid #11005e;
+}
+
+.input-field.error{
+    color: #ff3860;
+    font-size: 9px;
+    height: 50px;
+    padding: 6px;
+}
+
+/*for styling when its pressed*/
+.input-field input:focus{
+    box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.secondform button , .backbtn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 45px;
+    max-width: 200px;
+    width: 100%;
+    background-color: #11005e;
+    border: none;
+    border-radius: 6px;
+    outline: none;
+    color: white;
+    margin: 24px 0;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+    font-family: montserat;
+}
+
+.secondform button:hover{
+    background-color: #6b57c5;
+}
+
+.secondform .buttons{
+    display: flex;
+}
+
+.secondform .buttons button, .backbtn{
+    margin-right: 24px;
+}
+
+.secondform .buttons .backbtn{
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.secondform .buttons .backbtn:hover{
+    background-color: #6b57c5;
+}
+
+
+@media(max-width: 750px){
+    
+    .secondform .fields .input-field{
+        width: calc(100% / 2 - 15px);
+    }
+}

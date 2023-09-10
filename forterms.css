@@ -1,0 +1,95 @@
+@font-face {
+    font-family: montserat;
+    src: url(/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserat-bold;
+    src: url(/Montserrat-ExtraBold.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: montserat;
+    background-color: #11005e;
+}
+
+body::-webkit-scrollbar{
+    display: none;
+}
+
+.navbar .navitems{
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    top: 0;
+    width: 50%;
+}
+
+.navbar .navitems a{
+    color: white;
+    text-decoration: none;
+    padding-top: 3rem;
+    padding-right: 7rem;
+    transition: 0.3s ease-in;
+}
+
+.navbar .navitems a:hover{
+    color: #6b57c5;
+}
+
+.navbar .navitems a .logo{
+    width: 6rem;
+    height: 4rem;
+    padding-left: 35px;
+    transition: 0.5s;
+    position: absolute;
+    top: 2rem;
+    left: 1rem;
+}
+
+section{
+    display: flex;
+}
+
+section .hero{
+    width: 50%;
+    height: 70vh;
+    background-color: #11005e;
+    margin-top: 5rem;
+    overflow: scroll;
+}
+
+section .hero::-webkit-scrollbar{
+    display: none;
+}
+
+section .hero h1{
+    font-size: 5rem;
+    color: white;
+    margin-left: 5rem;
+    font-family: montserat-bold;
+}
+
+section .hero p{
+    margin: 2rem;
+    color: white;
+    font-size: small;
+}
+
+section .hero p::-webkit-scrollbar{
+    display: none;
+}
+
+section .image{
+    width: 50%;
+    height: 100vh;
+    background-image: url(/Untitled-1.jpg);
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 50%;
+}

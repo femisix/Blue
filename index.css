@@ -1,0 +1,309 @@
+@font-face {
+    font-family: montserat;
+    src: url(/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: montserat-bold;
+    src: url(/Montserrat-ExtraBold.ttf);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;    
+    list-style: none;
+    background-color: #11005e;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    transition: 0.6s;
+    z-index: 1000;
+}
+
+.sticky .navbar{
+    background: #11005e;
+    height: 5.5rem;
+    transition: 0.6s;
+}
+
+.sticky .navbar .navitems a .logo{
+    width: 2rem;
+    height: 2rem;
+    transition: 0.5s;
+}
+
+.sticky .navbar .navitems .openmenu{
+    width: 2rem;
+    height: 2rem;
+    margin: 2rem;
+}
+
+.sticky .navbar .nav-items .navlinks li a{
+    color: black;
+}
+.sticky .navbar .nav-items{
+    padding-top: 15px;
+}
+
+.navbar .navitems a .logo{
+    width: 4rem;
+    height: 4rem;
+    position: relative;
+    padding-left: 35px;
+    padding-top: 2rem;
+    transition: 0.5s;
+}
+
+.navbar .navitems .navlinks{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 2.5rem;
+    font-size: 15px;
+    transition: 0.5s;
+    width: 40%;
+}
+
+.navbar .navitems .openmenu{
+    width: 3rem;
+    height: 3rem;
+    margin: 3rem;
+    cursor: pointer;
+    display: none;
+}
+
+.navbar .navitems{
+    display: flex;
+    justify-content: space-between;
+    height: 5rem;
+    width: 100%;
+}
+
+.navbar .navitems .navlinks li a{
+    margin-right: 45px;
+    padding-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    font-family: verdana, sans-serif;
+    text-decoration: none;
+}
+
+.navbar .navitems .navlinks li a:hover{
+    color: #5f45d1;
+    transition: 0.2s ease-in;
+}
+
+.navbar .navitems .navlinks .closemenu{
+    width: 3rem;
+    height: 3rem;
+    display: none;
+    cursor: pointer;
+}
+
+body .phase1 section {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: 0.5s ease-in;
+    opacity: 0;
+    display: flex;
+    background-position: center;
+}
+
+/*---------right context---------*/
+
+body .phase1 section div{
+    position: absolute;
+    bottom: 20%;
+    left: 59%;
+    max-width: 50%;
+}
+
+body .phase1 section div h1{
+    font-family: montserat-bold;
+    color: white;
+    font-size: 5rem;
+}
+
+body .phase1 section div h3{
+    font-family: montserat-bold;
+    color: white;
+    font-size: 3.5rem;
+    word-wrap: initial;
+}
+
+body .phase1 section div small{
+    font-family: montserat;
+    color: white;
+    font-size: 10px;
+    position: relative;
+    bottom: -7rem;
+}
+
+body .phase1 section.active{
+    opacity: 1;
+}
+
+
+body .phase1 section img{
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+}
+
+body .controls{
+    position: absolute;
+    top: 85%;
+    transform: translateY(-50%);
+    left: 0;
+    width: 80px;
+}
+
+.controls li{
+    position: relative;
+    width: 50px;
+    height: 50px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.controls li:hover{
+    background: #11005e;
+    transition: 0.4s ease-in;
+}
+.controls li:before{
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-left: 3px solid white;
+    border-bottom: 3px solid white;
+    transform: rotate(135deg);
+}
+
+.controls li:nth-child(2):before{
+    transform: rotate(313deg);
+}
+
+@media(max-width: 800px){
+    body{
+        height: 100%;
+    }
+    .navbar .navitems .navlinks{
+        height: 100vh;
+        width: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: #11005e;
+        transition: left 1s ease;
+        display: none;
+    }
+
+    .navbar .navitems .navlinks .closemenu{
+        display: block;
+        position: absolute;
+        top: 50px;
+        right: 50px;
+    }
+
+    .navbar .navitems .openmenu{
+        display: block;
+    }
+
+    .navbar .navitems .navlinks li a{
+        font-size: 2rem;
+        padding-top: 1rem;
+    }
+
+    body .controls{
+        display: none;
+    }
+
+    body .phase1 section img{
+        width: 100%;
+        height: 100%;
+    }
+
+    body .phase1{
+        height: 100vh;
+    }
+    
+    body .phase1 section{
+        width: 100%;
+        height: 100%;
+        opacity: 1;
+        position: initial;
+    }
+
+    body .phase1 section div{
+    position: absolute;
+    bottom: 15%;
+    left: 30%;
+    max-width: 50%;
+    }
+
+    body .phase1 section div small{
+    bottom: -3rem;
+    }
+
+    body .phase1 section .hero1{
+        position: absolute;
+        top: 110%;
+        left: 30%;
+    }
+
+    body .phase1 section .hero1 h1{
+        color: black;
+    }
+
+    body .phase1 section .hero1 h3{
+        color: black;
+    }
+
+    body .phase1 section .hero1 small{
+        bottom: -6rem;
+    }
+
+    body .phase1 section .hero2{
+        position: absolute;
+        top: 220%;
+        left: 30%;
+    }
+
+    body .phase1 section .hero2 small{
+        bottom: -6rem;
+    }
+}
+
+@media(max-width: 950px){
+    body .phase1 section .hero1 h3{
+        font-size: 40px;
+    }
+    body .phase1 section .hero2 h3{
+        font-size: 40px;
+    }
+    body .phase1 section div h3{
+        font-size: 40px;
+    }
+}
+
+.segment{
+    background-color: white;
+    width: 7rem;
+}
